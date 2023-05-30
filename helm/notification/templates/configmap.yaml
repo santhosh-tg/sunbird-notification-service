@@ -46,11 +46,12 @@ data:
   sunbird_cassandra_port: {{ .Values.sunbird_cassandra_port | quote }}
   sunbird_cassandra_username: {{ .Values.sunbird_cassandra_username }}
   sunbird_keycloak_required_action_link_expiration_seconds: {{ .Values.sunbird_keycloak_required_action_link_expiration_seconds | quote }}
-  sunbird_mail_server_from_email: {{ .Values.sunbird_mail_server_from_email }}
-  sunbird_mail_server_host: {{ .Values.sunbird_mail_server_host }}
-  sunbird_mail_server_password: {{ .Values.sunbird_mail_server_password }}
+  sunbird_mail_server_from_email: {{ .Values.sunbird_mail_server_from_email | quote  }}
+  sunbird_mail_server_host: {{ .Values.sunbird_mail_server_host | quote }}
+  sunbird_mail_server_password: {{ .Values.sunbird_mail_server_password | quote }}
+  sunbird_mail_server_username: {{ .Values.sunbird_mail_server_username | quote }}
   sunbird_mail_server_port: {{ .Values.sunbird_mail_server_port | quote }}
-  sunbird_msg_91_auth: {{ .Values.sunbird_msg_91_auth }}
+  sunbird_msg_91_auth: {{ .Values.sunbird_msg_91_auth | quote }}
   sunbird_notification_kafka_servers_config: {{ .Values.sunbird_notification_kafka_servers_config }}
   sunbird_notification_kafka_topic: {{ .Values.sunbird_notification_kafka_topic }}
   sunbird_notification_msg_default_sender: {{ .Values.sunbird_notification_msg_default_sender }}

@@ -1,5 +1,5 @@
 apiVersion: v2
-name: sb-notification-service
+name: notification
 description: A Helm chart for Sunbird Lern group service 
 
 # A chart can be either an 'application' or a 'library' chart.
@@ -24,12 +24,3 @@ version: 0.1.0
 appVersion: "5.0.0"
 
 
-dependencies:
-  - name: common_opa_policies
-    repository: https://keshavprasadms.github.io/sunbird-helmchart-templates
-    version: 0.1.0   
-    condition: common_opa_policies.enabled
-  - name: common
-    repository: https://keshavprasadms.github.io/sunbird-helmchart-templates
-    version: 0.1.0
-     

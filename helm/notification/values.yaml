@@ -27,7 +27,7 @@ sunbird_sso_client_secret: ""
 ## You can override these if you have a use case for it
 ENV_NAME: dev
 LEARNER_SERVICE_PORT: http://learner-service.lern.svc.cluster.local:9000
-SUNBIRD_KAFKA_URL:  http://kafka.lern.svc.cluster.local:9092
+SUNBIRD_KAFKA_URL:  kafka.lern.svc.cluster.local:9092
 accesstoken:
   publickey:
     basepath: /keys/
@@ -40,12 +40,12 @@ sunbird_cassandra_password: password
 sunbird_cassandra_port: 9042
 sunbird_cassandra_username: cassandra
 sunbird_keycloak_required_action_link_expiration_seconds: "2592000"
-sunbird_mail_server_from_email: test@test.com 
-sunbird_mail_server_host: smtp.test.com 
-sunbird_mail_server_password: test
+sunbird_mail_server_from_email: "" 
+sunbird_mail_server_host: ""
+sunbird_mail_server_password: ""
 sunbird_mail_server_port: "587"
-sunbird_mail_server_username: test
-sunbird_msg_91_auth: test
+sunbird_mail_server_username: ""
+sunbird_msg_91_auth: ""
 sunbird_notification_kafka_servers_config: kafka.lern.svc.cluster.local:9092
 sunbird_notification_kafka_topic: sunbirdstaging.lms.notification
 sunbird_notification_msg_default_sender: DKSAPP
@@ -83,9 +83,9 @@ local_chart_development: true
 ## These are standard defaults that work well
 ## You can override these if you have a use case for it
 image:
-  registry: docker.io
-  repository: ssksanthosh/notification_service
-  tag: release-5.0.0
+  registry: sunbirded.azurecr.io
+  repository: notification_service
+  tag: release-5.0.0_RC8_1
 
 replicaCount: 1
 
